@@ -1,7 +1,23 @@
 # Module 1: Compressible Flow Fundamentals
 
 ## 1. Introduction and Assumptions
-*Write a brief summary here about what makes a flow "compressible" (usually when Mach number > 0.3) and the assumption of Isentropic Flow (adiabatic and reversible).*
+Compressible Flow can be defined as variable density flow which is in constrast to incompressible flow. Consider small element of fluid of volume $v$. The pressure around the element is $p$. Assume pressure is increased by an infinitesimal $dp$. Naturally, volume changes $dv$ amonut. The volume change per unit volume can be expressed as $\frac{dv}{v}$. The fractioanl volume change per unit pressure shange which is called compressibility can be expressed as:
+  
+  $$\tau = \frac{-dv/v}{dp}$$
+
+If fluid has unit mass that $\rho = 1/v$. Then expression can be rearranged as:
+
+$$\tau = \frac{1}{\rho} \frac{d\rho}{dp}$$
+
+For most practical problems, the flow is considered as compressible if $d\rho/\rho$ is more than 5 percent.
+
+The gas assumed as continuum, perfect and inviscid for most of the cases.
+
+$$p = \rho R T$$
+
+$$R = 287 \frac{J}{kg * K}$$
+
+$$ \gamma= \frac{c_p}{c_v} $$
 
 ## 2. Speed of Sound and Mach Number
 The speed of sound is the speed at which a small pressure wave propagates through a fluid. For an ideal gas, it depends entirely on the temperature.
@@ -14,8 +30,23 @@ The speed of sound is the speed at which a small pressure wave propagates throug
   $$M = \frac{V}{a}$$
   Where $V$ is the local flow velocity.
 
-## 3. Stagnation (Total) Properties vs. Static Properties
-*Write a short note here explaining the difference between static pressure (what you feel moving with the flow) and stagnation pressure (what you feel if you bring the flow to a dead stop).*
+  $M<0.8$ subsonic flow
+
+  $0.8<M<1.2$ transonic flow
+
+  $1<M$ supesonic flow
+
+## 3. Isentropic Relations
+
+An isentropic process was already defined as adiabatic and reversible. 
+
+$$\partial{q}=0$$ 
+$$ds_i=0  $$
+$$ds=0 $$
+$$\frac{p_2}{p_1}=\left(\frac{\rho_2}{\rho_1}\right)^\gamma=\left(\frac{T_2}{T_1}\right)^\frac{\gamma}{\gamma-1}$$
+
+  
+## 4. Stagnation (Total) Properties vs. Static Properties
 
 The fundamental isentropic relations linking total properties (denoted with subscript $0$) to static properties are:
 
@@ -27,11 +58,3 @@ The fundamental isentropic relations linking total properties (denoted with subs
 
 * **Density Ratio:**
   $$\frac{\rho_0}{\rho} = \left( 1 + \frac{\gamma - 1}{2} M^2 \right)^{\frac{1}{\gamma - 1}}$$
-
-## 4. Choked Flow and Mass Flow Rate (Critical for Injector Design)
-*Explain "Choking" here. What happens when the flow reaches $M = 1$ at the throat of an injector? Why can't the mass flow rate increase any further even if we drop the downstream pressure?*
-
-The maximum (choked) mass flow rate through an orifice area ($A^*$) is calculated as:
-$$\dot{m} = \frac{A^* p_0}{\sqrt{R T_0}} \sqrt{\gamma \left(\frac{2}{\gamma + 1}\right)^{\frac{\gamma + 1}{\gamma - 1}}}$$
-
-This equation is the holy grail for our RDRE injector design. It will dictate exactly how big we need to make our injection holes to achieve the desired mass flow rate.
