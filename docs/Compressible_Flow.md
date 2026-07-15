@@ -102,7 +102,51 @@ $$ p_1 + \rho_1 u_1^2 = p_2 + \rho_2 u_2^2$$
   $$\frac{\rho_o}{\rho} = \left( 1 + \frac{\gamma - 1}{2} M^2 \right)^{1 / (\gamma - 1)}$$
 
 
+##  Normal Shock Relations
+A normal shock is a stationary, abrupt change in flow properties perpendicular to the flow direction. The flow is adiabatic and the area is constant, but the process is highly irreversible (entropy increases). The upstream state is denoted as $1$ and the downstream state as $2$.
 
+* **Mach Number Behind the Shock ($M_2$):**
+$$M_2^2 = \frac{1 + \frac{\gamma-1}{2}M_1^2}{\gamma M_1^2 - \frac{\gamma-1}{2}}$$
+
+(Note: For $M_1 > 1$, $M_2$ is always $< 1$. The flow instantly becomes subsonic.)
+
+* **Static Pressure Ratio:**
+$$\frac{p_2}{p_1} = 1 + \frac{2\gamma}{\gamma+1}(M_1^2 - 1)$$
+
+* **Static Temperature Ratio:**
+$$\frac{T_2}{T_1} = \left[ 1 + \frac{2\gamma}{\gamma+1}(M_1^2 - 1) \right] \left[ \frac{2 + (\gamma-1)M_1^2}{(\gamma+1)M_1^2} \right]$$
+
+##  One-Dimensional Flow with Heat Addition (Rayleigh Flow)
+Rayleigh flow models a steady, one-dimensional, constant-area flow with heat addition (or rejection) but without friction. This is a foundational approximation for the combustion chamber in our RDRE. Properties are often referenced to the sonic state (denoted with an asterisk $^*$), where $M = 1$.
+
+* **Pressure Ratio:**
+$$\frac{p}{p^*} = \frac{\gamma + 1}{1 + \gamma M^2}$$
+
+* **Temperature Ratio:**
+$$\frac{T}{T^*} = M^2 \left( \frac{\gamma + 1}{1 + \gamma M^2} \right)^2$$
+
+* **Stagnation Temperature Ratio (Measures Heat Addition):**
+$$\frac{T_0}{T_0^*} = \frac{2(\gamma + 1) M^2}{(1 + \gamma M^2)^2} \left( 1 + \frac{\gamma - 1}{2} M^2 \right)$$
+*(Note: Heat addition drives the Mach number toward $M=1$, a phenomenon known as thermal choking.)*
+
+##  One-Dimensional Flow with Friction (Fanno Flow)
+Fanno flow considers a steady, one-dimensional, adiabatic flow with friction in a constant-area duct. This is critical for modeling the flow through long, narrow injector channels. Like Rayleigh flow, properties are normalized to the sonic state ($^*$).
+
+* **Temperature Ratio:**
+$$\frac{T}{T^*} = \frac{\gamma + 1}{2 + (\gamma - 1) M^2}$$
+
+* **Pressure Ratio:**
+$$\frac{p}{p^*} = \frac{1}{M} \sqrt{\frac{\gamma + 1}{2 + (\gamma - 1) M^2}}$$
+
+* **Stagnation Pressure Ratio (Measures Entropy Increase):**
+
+$$\frac{p_0}{p_0^*} = \frac{1}{M} \left[ \left( \frac{2 + (\gamma - 1) M^2}{\gamma + 1} \right)^{\frac{\gamma + 1}{2(\gamma - 1)}} \right]$$
+
+* **Friction Length Relation:**
+
+$$\frac{4fL^*}{D} = \frac{1 - M^2}{\gamma M^2} + \frac{\gamma + 1}{2\gamma} \ln \left[ \frac{(\gamma + 1) M^2}{2 + (\gamma - 1) M^2} \right]$$
+
+(Where $f$ is the friction factor, $D$ is the duct diameter, and $L^*$ is the length of duct required to choke the flow due to friction.)
 
 
 
