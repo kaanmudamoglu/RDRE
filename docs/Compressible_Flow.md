@@ -129,6 +129,28 @@ $$\frac{T}{T^*} = M^2 \left( \frac{\gamma + 1}{1 + \gamma M^2} \right)^2$$
 $$\frac{T_0}{T_0^*} = \frac{2(\gamma + 1) M^2}{(1 + \gamma M^2)^2} \left( 1 + \frac{\gamma - 1}{2} M^2 \right)$$
 *(Note: Heat addition drives the Mach number toward $M=1$, a phenomenon known as thermal choking.)*
 
+### Physical Trends for One-Dimensional Flow with Heat Addition (Rayleigh Flow)
+
+Certain physical trends reflected by the numbers obtained from such solutions are important, and are summarized here:
+
+**1. For *supersonic* flow in region 1, i.e., $M_1 > 1$, when heat is added:**
+* Mach number decreases, $M_2 < M_1$
+* Pressure increases, $p_2 > p_1$
+* Temperature increases, $T_2 > T_1$
+* Total temperature increases, $T_{0_2} > T_{0_1}$
+* Total pressure decreases, $p_{0_2} < p_{0_1}$
+* Velocity decreases, $u_2 < u_1$
+
+**2. For *subsonic* flow in region 1, i.e., $M_1 < 1$, when heat is added:**
+* Mach number increases, $M_2 > M_1$
+* Pressure decreases, $p_2 < p_1$
+* Temperature increases for $M_1 < \gamma^{-1/2}$ and decreases for $M_1 > \gamma^{-1/2}$
+* Total temperature increases, $T_{0_2} > T_{0_1}$
+* Total pressure decreases, $p_{0_2} < p_{0_1}$
+* Velocity increases, $u_2 > u_1$
+
+> **Key Takeaway:** Heat addition always drives the Mach numbers toward 1, decelerating a supersonic flow and accelerating a subsonic flow. For heat extraction (cooling of the flow), all of the above trends are opposite.
+
 ##  One-Dimensional Flow with Friction (Fanno Flow)
 Fanno flow considers a steady, one-dimensional, adiabatic flow with friction in a constant-area duct. This is critical for modeling the flow through long, narrow injector channels. Like Rayleigh flow, properties are normalized to the sonic state ($^*$).
 
@@ -147,6 +169,26 @@ $$\frac{p_0}{p_0^*} = \frac{1}{M} \left[ \left( \frac{2 + (\gamma - 1) M^2}{\gam
 $$\frac{4fL^*}{D} = \frac{1 - M^2}{\gamma M^2} + \frac{\gamma + 1}{2\gamma} \ln \left[ \frac{(\gamma + 1) M^2}{2 + (\gamma - 1) M^2} \right]$$
 
 (Where $f$ is the friction factor, $D$ is the duct diameter, and $L^*$ is the length of duct required to choke the flow due to friction.)
+
+### Physical Trends for One-Dimensional Flow with Friction (Fanno Flow)
+
+Certain physical trends reflected by the numbers obtained from such solutions are summarized here:
+
+**1. For *supersonic* inlet flow, i.e., $M_1 > 1$, the effect of friction on the downstream flow is such that:**
+* Mach number decreases, $M_2 < M_1$
+* Pressure increases, $p_2 > p_1$
+* Temperature increases, $T_2 > T_1$
+* Total pressure decreases, $p_{0_2} < p_{0_1}$
+* Velocity decreases, $u_2 < u_1$
+
+**2. For *subsonic* inlet flow, i.e., $M_1 < 1$, the effect of friction on the downstream flow is such that:**
+* Mach number increases, $M_2 > M_1$
+* Pressure decreases, $p_2 < p_1$
+* Temperature decreases, $T_2 < T_1$
+* Total pressure decreases, $p_{0_2} < p_{0_1}$
+* Velocity increases, $u_2 > u_1$
+
+> **Key Takeaway:** Friction always drives the Mach number toward 1, decelerating a supersonic flow and accelerating a subsonic flow.
 
 
 
