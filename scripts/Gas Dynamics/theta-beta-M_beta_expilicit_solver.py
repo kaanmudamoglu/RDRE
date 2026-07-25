@@ -1,11 +1,20 @@
-import numpy as np
+import sys
+import os
 import math
+import numpy as np
+
+# 1. Tell Python to look in the parent 'scripts' directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_scripts_dir = os.path.dirname(current_dir)
+sys.path.append(parent_scripts_dir)
+
+# 2. Import your centralized root finder
+from Numeric_Methods.hybrid_Root_Solver import hybrid_root_solver
 
 
 def theta_beta_M(M1, theta, gamma):
 
     def f(beta):
-
         term1 = (
             (2 / math.tan(beta))
             * (
@@ -26,86 +35,28 @@ def theta_beta_M_solver(
     M1,
     theta,
     gamma,
-    tolerance=1e-8,
-    max_iter=100
+    tolerance=1e-8
 ):
-
+    
+    # The minimum physically possible shock angle is the Mach angle
     mu = math.asin(1 / M1)
-
-    interval = np.linspace(
-        mu + 1e-6,
-        math.pi / 2 - 1e-6,
-        500
-    )
-
+    
     f = theta_beta_M(M1, theta, gamma)
 
-    roots = []
-
-    beta_old = interval[0]
-    fi_old = f(beta_old)
-
-    for beta in interval[1:]:
-
-        fi = f(beta)
-
-
-        if fi * fi_old < 0:
-
-            left = beta_old
-            right = beta
-
-            f_left = fi_old
-            f_right = fi
-
-            for _ in range(max_iter):
-
-                # Secant
-
-                if abs(f_right - f_left) > 1e-12:
-
-                    x = right - (
-                        f_right
-                        * (right - left)
-                        / (f_right - f_left)
-                    )
-
-                else:
-                    x = 0.5 * (left + right)
-
-                # Bracket dışına çıkarsa bisection
-
-                if not (left < x < right):
-                    x = 0.5 * (left + right)
-
-                fx = f(x)
-
-                if abs(fx) < tolerance:
-                    roots.append(x)
-                    break
-
-                if f_left * fx < 0:
-
-                    right = x
-                    f_right = fx
-
-                else:
-
-                    left = x
-                    f_left = fx
-
-                if abs(right - left) < tolerance:
-
-                    roots.append(
-                        0.5 * (left + right)
-                    )
-
-                    break
-
-        beta_old = beta
-        fi_old = fi
+    # Search for roots between the Mach angle and a normal shock (pi/2)
+    roots = hybrid_root_solver(
+        f,
+        mu,
+        math.pi / 2,
+        tolerance=tolerance
+    )
 
     return roots
+
+
+# ===================================================
+# TEST
+# ===================================================
 
 roots = theta_beta_M_solver(
     2,
