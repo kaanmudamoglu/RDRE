@@ -67,7 +67,37 @@ This equation is called $\theta - \beta - M$ relation. This relation is vital to
 - For any given $M_1$, there is a maximum deflection angle $\theta_{max}$. If the geometry such that $\theta > \theta_{max}$, then no solution exists for a straight oblique shock wave. Instead, the shock will be curved and detached.
 -For any given $\theta < \theta_{max}$ there are two values of $beta$ predicted by the equation. The large value of $beta$ is called as strong shock solution and small one is called as weak shock solution. In nature, the weak shock solution is favored. Whether the weak or normal shock occurs determined by backpressure. If the downstream pressure is increased by some independent mechanism than the strong shock can be occur. In the weak shock solution, $M_2$ is supersonic except for a small region near $\theta_{max}$. In the strong shock solution $M_2$ is subsonic.
 - If $\theta = 0$ then $\beta = \pi/2$ (corresponding to a normal shock) or $\beta = \mu$
-- For fixed $\theta$, as the free stream Mach number decreases the wave angle increases. Finally, there is a Mach number below which is no solution are possible. For lower Mach numbers the shock becomes detached. 
+- For fixed $\theta$, as the free stream Mach number decreases the wave angle increases. Finally, there is a Mach number below which is no solution are possible. For lower Mach numbers the shock becomes detached.
 
- 
+
+$$ Regular Reflection from a Solid Boundary
+
+<img width="503" height="205" alt="image" src="https://github.com/user-attachments/assets/db90d714-30b0-4aa1-9e3a-6a9fd42918bb" />
+
+  When an oblique shock strikes a solid wall, the flow immediately next to the wall must remain parallel to the wall (wall boundary condition). Therefore, the incident shock cannot simply end at the wall; a reflected oblique shock is generated to redirect the flow back parallel to the wall.
+
+- A reflected shock forms at the wall
+- The reflected shock turns the flow back by $\theta$
+- After reflection, the flow becomes parallel to the wall again
+- Since $M_2 < M_1$, reflected shock is weaker than the incident shock.
+- Reflection is not specular (not mirror like)
+
+
+$$ Comment on Flow Through Multiple Shock Systems
+
+  For the same final Mach number, slowing a supersonic flow through several weak shocks is more efficient than slowing it through one strong shock.
+
+The reason is that multiple weak shocks produce:
+
+-Smaller entropy increases
+-Smaller total pressure losses
+-Higher aerodynamic efficiency
+
+Entropy generation across is highly nonlinear with Mach number.
+As upstream Mach Number increases:
+-Entropy rise increases rapidly
+-Total pressure ratio decreases rapidly
   
+
+
+
