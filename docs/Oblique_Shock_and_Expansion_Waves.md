@@ -14,7 +14,7 @@
 - Temperature increases
 - Density increases
 
-  In contrast, when supersonic flow is "turned away from itself", expansion wave is formed. Here, he surface is deflected downward through an angle $\theta$. Consequently the flow streamlines are deflected downward, away from the main bulk of flow above the surface. This change in flow direction takes place across an expansion wave, centered at point A. Away from the surface, this oblique expansion wave fans out, as shown in Fig. 4.4b. In contrast to the discontinuities across a shock wave, all flow properties through an expansion wave change smoothly and continuously, with the exception of the wall streamline which changes discontinuously at point A.
+  In contrast, when supersonic flow is "turned away from itself", expansion wave is formed. Here, the surface is deflected downward through an angle $\theta$. Consequently the flow streamlines are deflected downward, away from the main bulk of flow above the surface. This change in flow direction takes place across an expansion wave, centered at point A. Away from the surface, this oblique expansion wave fans out, as shown in Fig. 4.4b. In contrast to the discontinuities across a shock wave, all flow properties through an expansion wave change smoothly and continuously, with the exception of the wall streamline which changes discontinuously at point A.
 
 ### Across the expansion wave:
 - Mach number increases
@@ -47,7 +47,7 @@ $$M_2 = \frac{M_{n_2}}{sin(\beta-\theta)}$$
   Changes across an oblique shock are function of both $M_1$ and $\beta$. Normal shocks are just a special case of oblique shocks where $\beta = \pi/2$
 
 
-  $M_2 cannot be found until the flow deflection angle $\theta$ is obtained. However, $\theta$ is also function of $M_1$ and $\beta$.
+  $M_2$ cannot be found until the flow deflection angle $\theta$ is obtained. However, $\theta$ is also function of $M_1$ and $\beta$.
 
 $$tan\beta = \frac{u_1}{\omega_1}$$
 
@@ -64,7 +64,7 @@ This equation is called $\theta - \beta - M$ relation. This relation is vital to
 
 <img width="631" height="357" alt="image" src="https://github.com/user-attachments/assets/3f930865-fdbc-4e1c-a993-a14d7e29f23d" />
 
-- For any given $M_1$, there is a maximum deflection angle $\theta_{max}$. If the geometry such that $\theta > \theta_{max}$, then mo solution exists for a straight oblique shock wave. Instead, the shock will be curved and detached.
+- For any given $M_1$, there is a maximum deflection angle $\theta_{max}$. If the geometry such that $\theta > \theta_{max}$, then no solution exists for a straight oblique shock wave. Instead, the shock will be curved and detached.
 -For any given $\theta < \theta_{max}$ there are two values of $beta$ predicted by the equation. The large value of $beta$ is called as strong shock solution and small one is called as weak shock solution. In nature, the weak shock solution is favored. Whether the weak or normal shock occurs determined by backpressure. If the downstream pressure is increased by some independent mechanism than the strong shock can be occur. In the weak shock solution, $M_2$ is supersonic except for a small region near $\theta_{max}$. In the strong shock solution $M_2$ is subsonic.
 - If $\theta = 0$ then $\beta = \pi/2$ (corresponding to a normal shock) or $\beta = \mu$
 - For fixed $\theta$, as the free stream Mach number decreases the wave angle increases. Finally, there is a Mach number below which is no solution are possible. For lower Mach numbers the shock becomes detached. 
