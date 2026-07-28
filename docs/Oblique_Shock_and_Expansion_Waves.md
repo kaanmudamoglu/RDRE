@@ -83,7 +83,7 @@ $$ Regular Reflection from a Solid Boundary
 - Reflection is not specular (not mirror like)
 
 
-$$ Comment on Flow Through Multiple Shock Systems
+## Comment on Flow Through Multiple Shock Systems
 
   For the same final Mach number, slowing a supersonic flow through several weak shocks is more efficient than slowing it through one strong shock.
 
@@ -98,6 +98,31 @@ As upstream Mach Number increases:
 -Entropy rise increases rapidly
 -Total pressure ratio decreases rapidly
   
+## Prandtl-Meyer Expansion
+  
+- $M_2 > M_1$
+- The pressure, density, and temperature decrease through expansion wave
+- The expansion itself is an continuous expansion region, composed of an infinite number of Mach waves, bounded upstream by $\mu_1 = arcsin(1/M_1)$ and downstream by $\mu_1 = arcsin(1/M_1)$
+- Streamlines through an expansion waves are smooth curved lines
+- Since expansion is a continuous succession of Mach waves and $ds=0$ for each Mach wave, the expansion is isentropic.
+
+Governing differential equation for Prandtl-Meyer flow:
+
+$$d\theta = \sqrt(M^2-1) \frac{dV}{V} $$
+
+### Prandtl-Meyer function
+
+For calorically perfect gases:
+
+$$v(M) = \sqrt{\frac{\gamma + 1}{\gamma - 1}} \tan^{-1} \sqrt{\frac{\gamma - 1}{\gamma + 1}(M^2 - 1)} - \tan^{-1} \sqrt{M^2 - 1}$$
+
+$$ \theta_2 = v(M_2) - v(M_1) $$
+
+Since $\theta$ and $v(M_1) can be measured, $v(M_2)$ and $M_2$ can be found. The expansion wave is isentropic so, $T_o$ and $p_0$ constant through wave. Hence:
+
+$$\frac{T_1}{T_2} = \frac{1 + \frac{\gamma - 1}{2} M_2^2}{1 + \frac{\gamma - 1}{2} M_1^2}$$
+
+$$\frac{p_1}{p_2} = \left[ \frac{1 + \frac{\gamma - 1}{2} M_2^2}{1 + \frac{\gamma - 1}{2} M_1^2} \right]^{\gamma / (\gamma - 1)}$$
 
 
-
+  
