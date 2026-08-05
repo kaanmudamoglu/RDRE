@@ -70,7 +70,7 @@ This equation is called $\theta - \beta - M$ relation. This relation is vital to
 - For fixed $\theta$, as the free stream Mach number decreases the wave angle increases. Finally, there is a Mach number below which is no solution are possible. For lower Mach numbers the shock becomes detached.
 
 
-$$ Regular Reflection from a Solid Boundary
+## Regular Reflection from a Solid Boundary
 
 <img width="503" height="205" alt="image" src="https://github.com/user-attachments/assets/db90d714-30b0-4aa1-9e3a-6a9fd42918bb" />
 
@@ -118,11 +118,36 @@ $$v(M) = \sqrt{\frac{\gamma + 1}{\gamma - 1}} \tan^{-1} \sqrt{\frac{\gamma - 1}{
 
 $$ \theta_2 = v(M_2) - v(M_1) $$
 
-Since $\theta$ and $v(M_1) can be measured, $v(M_2)$ and $M_2$ can be found. The expansion wave is isentropic so, $T_o$ and $p_0$ constant through wave. Hence:
+Since $\theta$ and $v(M_1)$ can be measured, $v(M_2)$ and $M_2$ can be found. The expansion wave is isentropic so, $T_o$ and $p_0$ constant through wave. Hence:
 
 $$\frac{T_1}{T_2} = \frac{1 + \frac{\gamma - 1}{2} M_2^2}{1 + \frac{\gamma - 1}{2} M_1^2}$$
 
 $$\frac{p_1}{p_2} = \left[ \frac{1 + \frac{\gamma - 1}{2} M_2^2}{1 + \frac{\gamma - 1}{2} M_1^2} \right]^{\gamma / (\gamma - 1)}$$
+
+## Shock-Expansion Theory
+<img width="736" height="450" alt="image" src="https://github.com/user-attachments/assets/278a06cb-de66-4a03-a6de-c35508181125" />
+
+The pressure drug is:
+
+$$ D = 2*(p_2 l sin\eta - p_3 l sin \eta)$$
+
+$$ D = (p_2 - p_3) $$
+
+## Effect of angle of attack
+Apparent Upwash Paradox
+
+Shock-expansion analysis of a flat plate predicts a small upward flow deflection (ϕ\phiϕ) immediately downstream of the trailing edge.
+At first sight this seems inconsistent with lift generation, since a lifting body should produce a net downward momentum change (downwash).
+The paradox is resolved by examining the entire wave field.
+Although a local upwash exists near the trailing edge, the shock and expansion waves influence a much larger region of the flow.
+When the complete flow field is considered, the net effect is an overall downwash, consistent with momentum conservation and lift generation.
+In steady supersonic flow, disturbances cannot propagate upstream.
+Therefore, trailing-edge flow does not affect the pressure distribution on the plate; lift depends only on the surface pressure distribution.
+
+Key idea:
+
+A local upwash may exist behind a supersonic airfoil, but the overall flow field still produces a net downwash and therefore generates lift.
+
 
 
   
