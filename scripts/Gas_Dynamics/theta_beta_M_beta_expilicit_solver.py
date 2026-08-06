@@ -1,7 +1,6 @@
 import sys
 import os
 import math
-import numpy as np
 
 # 1. Tell Python to look in the parent 'scripts' directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -12,7 +11,7 @@ sys.path.append(parent_scripts_dir)
 from Numeric_Methods.hybrid_Root_Solver import hybrid_root_solver
 
 
-def theta_beta_M(M1, theta, gamma):
+def theta_beta_M(M1, theta, gamma=1.4):
 
     def f(beta):
         term1 = (
@@ -34,7 +33,7 @@ def theta_beta_M(M1, theta, gamma):
 def theta_beta_M_solver(
     M1,
     theta,
-    gamma,
+    gamma=1.4,
     tolerance=1e-8
 ):
     
@@ -58,11 +57,10 @@ def theta_beta_M_solver(
 # TEST
 # ===================================================
 
-roots = theta_beta_M_solver(
-    2,
-    math.radians(10),
-    1.4
-)
+#roots = theta_beta_M_solver(
+#    3,
+#   math.radians(20)
+#)
 
-for root in roots:
-    print(math.degrees(root))
+#for root in roots:
+#    print(math.degrees(root))

@@ -57,12 +57,3 @@ def hybrid_root_solver(f, a, b, tolerance=1e-8, max_iter=1000, scan_points=1000)
 
     return clean_roots
 
-# ===================================================
-# TEST
-# ===================================================
-
-def func(x):
-    return x**2 + 4*x + 4
-
-roots = hybrid_root_solver(func, -6, 0)
-print(roots)

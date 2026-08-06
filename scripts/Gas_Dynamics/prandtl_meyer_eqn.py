@@ -36,3 +36,10 @@ def M1_to_M2_expansion_solver(M1,theta,gamma=1.4):
 
     return roots
 
+def T1_T2_ratio(M1,M2,gamma=1.4):
+    ratio = (1+((gamma-1)/2)*M2**2)/(1+(gamma-1)/2*M1**2)
+    return ratio
+
+def p1_p2_ratio(M1,M2,gamma=1.4):
+    ratio = ((1+((gamma-1)/2)*M2**2)/(1+((gamma-1)/2)*M1**2))**(gamma/(gamma-1))
+    return ratio
