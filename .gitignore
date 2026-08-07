@@ -225,4 +225,4 @@ log.*
 processor*
 VTK/
 ``
-constant/polyMesh/
+**constant/polyMesh/
