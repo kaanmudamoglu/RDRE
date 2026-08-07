@@ -1,0 +1,33 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+internalFacesOnly true;
+
+baffles
+{
+    plateBaffle
+    {
+        type        faceZone;
+        zoneName    plateFacesZone;
+
+        patches
+        {
+            master
+            {
+                name    plate_bottom;
+                type    wall;
+            }
+            slave
+            {
+                name    plate_top;
+                type    wall;
+            }
+        }
+    }
+}
